@@ -29,9 +29,13 @@
         private void InitializeComponent()
         {
             tabPage2 = new TabPage();
+            btnPdfExport = new Button();
+            label1 = new Label();
+            btnExcelExport = new Button();
             refreshButton = new Button();
             dataGridView1 = new DataGridView();
             tabPage1 = new TabPage();
+            pictureBox1 = new PictureBox();
             btnUpdate = new Button();
             title = new Label();
             panel1 = new Panel();
@@ -49,12 +53,10 @@
             txtName = new TextBox();
             lblName = new Label();
             tabControl = new TabControl();
-            btnExcelExport = new Button();
-            label1 = new Label();
-            btnPdfExport = new Button();
             tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             tabControl.SuspendLayout();
             SuspendLayout();
@@ -74,9 +76,38 @@
             tabPage2.Text = "tabPage2";
             tabPage2.UseVisualStyleBackColor = true;
             // 
+            // btnPdfExport
+            // 
+            btnPdfExport.Location = new Point(977, 88);
+            btnPdfExport.Name = "btnPdfExport";
+            btnPdfExport.Size = new Size(121, 39);
+            btnPdfExport.TabIndex = 16;
+            btnPdfExport.Text = "PDF";
+            btnPdfExport.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Maiandra GD", 20F, FontStyle.Bold);
+            label1.ForeColor = SystemColors.ActiveCaptionText;
+            label1.Location = new Point(879, 20);
+            label1.Name = "label1";
+            label1.Size = new Size(165, 41);
+            label1.TabIndex = 15;
+            label1.Text = "Export to";
+            // 
+            // btnExcelExport
+            // 
+            btnExcelExport.Location = new Point(826, 88);
+            btnExcelExport.Name = "btnExcelExport";
+            btnExcelExport.Size = new Size(121, 39);
+            btnExcelExport.TabIndex = 2;
+            btnExcelExport.Text = "Excel";
+            btnExcelExport.UseVisualStyleBackColor = true;
+            // 
             // refreshButton
             // 
-            refreshButton.Location = new Point(809, 411);
+            refreshButton.Location = new Point(809, 367);
             refreshButton.Name = "refreshButton";
             refreshButton.Size = new Size(138, 47);
             refreshButton.TabIndex = 1;
@@ -89,13 +120,14 @@
             dataGridView1.Location = new Point(30, 6);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(773, 461);
+            dataGridView1.Size = new Size(650, 408);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // tabPage1
             // 
-            tabPage1.BackColor = Color.Transparent;
+            tabPage1.BackColor = Color.White;
+            tabPage1.Controls.Add(pictureBox1);
             tabPage1.Controls.Add(btnUpdate);
             tabPage1.Controls.Add(title);
             tabPage1.Controls.Add(panel1);
@@ -108,6 +140,7 @@
             tabPage1.Controls.Add(lblFruitQuestion);
             tabPage1.Controls.Add(txtName);
             tabPage1.Controls.Add(lblName);
+            tabPage1.ForeColor = SystemColors.ActiveCaptionText;
             tabPage1.Location = new Point(4, 29);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
@@ -116,14 +149,23 @@
             tabPage1.Text = "tabPage1";
             tabPage1.Click += tabPage1_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(624, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(519, 482);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 16;
+            pictureBox1.TabStop = false;
+            // 
             // btnUpdate
             // 
             btnUpdate.BackColor = Color.Transparent;
             btnUpdate.Font = new Font("Maiandra GD", 15F, FontStyle.Bold);
             btnUpdate.ForeColor = SystemColors.ActiveCaptionText;
-            btnUpdate.Location = new Point(254, 383);
+            btnUpdate.Location = new Point(187, 409);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(198, 58);
+            btnUpdate.Size = new Size(163, 58);
             btnUpdate.TabIndex = 15;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = false;
@@ -134,7 +176,7 @@
             title.AutoSize = true;
             title.Font = new Font("Maiandra GD", 45F, FontStyle.Bold, GraphicsUnit.Point, 0);
             title.ForeColor = SystemColors.ActiveCaptionText;
-            title.Location = new Point(659, 58);
+            title.Location = new Point(18, 16);
             title.Name = "title";
             title.Size = new Size(450, 90);
             title.TabIndex = 14;
@@ -146,7 +188,7 @@
             panel1.Controls.Add(exercise3);
             panel1.Controls.Add(exercise1);
             panel1.Controls.Add(exercise2);
-            panel1.Location = new Point(33, 281);
+            panel1.Location = new Point(18, 339);
             panel1.Name = "panel1";
             panel1.Size = new Size(304, 64);
             panel1.TabIndex = 13;
@@ -198,7 +240,7 @@
             // rbFruit3
             // 
             rbFruit3.AutoSize = true;
-            rbFruit3.Location = new Point(171, 203);
+            rbFruit3.Location = new Point(156, 279);
             rbFruit3.Name = "rbFruit3";
             rbFruit3.Size = new Size(48, 24);
             rbFruit3.TabIndex = 5;
@@ -209,7 +251,7 @@
             // rbFruit0
             // 
             rbFruit0.AutoSize = true;
-            rbFruit0.Location = new Point(39, 203);
+            rbFruit0.Location = new Point(24, 279);
             rbFruit0.Name = "rbFruit0";
             rbFruit0.Size = new Size(38, 24);
             rbFruit0.TabIndex = 2;
@@ -220,7 +262,7 @@
             // rbFruit2
             // 
             rbFruit2.AutoSize = true;
-            rbFruit2.Location = new Point(127, 203);
+            rbFruit2.Location = new Point(112, 279);
             rbFruit2.Name = "rbFruit2";
             rbFruit2.Size = new Size(38, 24);
             rbFruit2.TabIndex = 4;
@@ -231,7 +273,7 @@
             // rbFruit1
             // 
             rbFruit1.AutoSize = true;
-            rbFruit1.Location = new Point(83, 203);
+            rbFruit1.Location = new Point(68, 279);
             rbFruit1.Name = "rbFruit1";
             rbFruit1.Size = new Size(38, 24);
             rbFruit1.TabIndex = 3;
@@ -244,9 +286,9 @@
             btnSubmit.BackColor = Color.Transparent;
             btnSubmit.Font = new Font("Maiandra GD", 15F, FontStyle.Bold);
             btnSubmit.ForeColor = SystemColors.ActiveCaptionText;
-            btnSubmit.Location = new Point(33, 383);
+            btnSubmit.Location = new Point(18, 409);
             btnSubmit.Name = "btnSubmit";
-            btnSubmit.Size = new Size(198, 58);
+            btnSubmit.Size = new Size(163, 58);
             btnSubmit.TabIndex = 12;
             btnSubmit.Text = "Insert";
             btnSubmit.UseVisualStyleBackColor = false;
@@ -256,7 +298,7 @@
             // 
             lblExerciseQuestion.AutoSize = true;
             lblExerciseQuestion.Font = new Font("Maiandra GD", 15F, FontStyle.Bold);
-            lblExerciseQuestion.Location = new Point(33, 248);
+            lblExerciseQuestion.Location = new Point(18, 306);
             lblExerciseQuestion.Name = "lblExerciseQuestion";
             lblExerciseQuestion.Size = new Size(466, 30);
             lblExerciseQuestion.TabIndex = 7;
@@ -266,7 +308,7 @@
             // 
             lblFruitQuestion.AutoSize = true;
             lblFruitQuestion.Font = new Font("Maiandra GD", 15F, FontStyle.Bold);
-            lblFruitQuestion.Location = new Point(33, 170);
+            lblFruitQuestion.Location = new Point(18, 246);
             lblFruitQuestion.Name = "lblFruitQuestion";
             lblFruitQuestion.Size = new Size(455, 30);
             lblFruitQuestion.TabIndex = 6;
@@ -274,16 +316,16 @@
             // 
             // txtName
             // 
-            txtName.Location = new Point(33, 95);
+            txtName.Location = new Point(18, 182);
             txtName.Name = "txtName";
-            txtName.Size = new Size(132, 27);
+            txtName.Size = new Size(246, 27);
             txtName.TabIndex = 1;
             // 
             // lblName
             // 
             lblName.AutoSize = true;
             lblName.Font = new Font("Maiandra GD", 15F, FontStyle.Bold);
-            lblName.Location = new Point(33, 58);
+            lblName.Location = new Point(18, 136);
             lblName.Name = "lblName";
             lblName.Size = new Size(231, 30);
             lblName.TabIndex = 0;
@@ -299,35 +341,6 @@
             tabControl.Size = new Size(1147, 511);
             tabControl.TabIndex = 0;
             // 
-            // btnExcelExport
-            // 
-            btnExcelExport.Location = new Point(826, 88);
-            btnExcelExport.Name = "btnExcelExport";
-            btnExcelExport.Size = new Size(121, 39);
-            btnExcelExport.TabIndex = 2;
-            btnExcelExport.Text = "Excel";
-            btnExcelExport.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Maiandra GD", 20F, FontStyle.Bold);
-            label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(879, 20);
-            label1.Name = "label1";
-            label1.Size = new Size(165, 41);
-            label1.TabIndex = 15;
-            label1.Text = "Export to";
-            // 
-            // btnPdfExport
-            // 
-            btnPdfExport.Location = new Point(977, 88);
-            btnPdfExport.Name = "btnPdfExport";
-            btnPdfExport.Size = new Size(121, 39);
-            btnPdfExport.TabIndex = 16;
-            btnPdfExport.Text = "PDF";
-            btnPdfExport.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -335,6 +348,7 @@
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(1149, 510);
             Controls.Add(tabControl);
+            ForeColor = SystemColors.ActiveCaptionText;
             Name = "Form1";
             Text = "Form1";
             tabPage2.ResumeLayout(false);
@@ -342,6 +356,7 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             tabControl.ResumeLayout(false);
@@ -373,5 +388,6 @@
         private Label label1;
         private Button btnExcelExport;
         private Button btnPdfExport;
+        private PictureBox pictureBox1;
     }
 }

@@ -18,6 +18,10 @@ namespace WinFormsApp1
         public Form1()
         {
             InitializeComponent();
+
+            // adding img to picturebox
+            pictureBox1.Image = System.Drawing.Image.FromFile(@"C:\Users\dolol\Desktop\healthapp_sql\WinFormsApp1\WinFormsApp1\Fruitimg.png");
+
             AddEditButtonColumn();
             LoadDataIntoDataGridView();
             dataGridView1.CellClick += new DataGridViewCellEventHandler(dataGridView1_CellClick);
@@ -542,7 +546,7 @@ namespace WinFormsApp1
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
-
+             
         }
 
         private void tabPage4_Click(object sender, EventArgs e)
